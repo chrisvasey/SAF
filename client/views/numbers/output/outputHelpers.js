@@ -14,24 +14,17 @@ Template.numberOutput.helpers({
 		var payP = moment(pay).format();
 		var a = moment().format();
 		var b = payP;
-
 		var ap = new Date(a);
 		var bp = new Date(b);
 		start = Math.floor( ap.getTime() / (3600*24*1000)); //days as integer from..
 		end   = Math.floor( bp.getTime() / (3600*24*1000)); //days as integer from..
 		daysDiff = end - start; // exact dates
 
-		//budget
+		//Budget
 		workingBudget = balance / daysDiff;
 		roundBudget = Math.round(workingBudget * 100) / 100
 
-		//output
-		console.log("Todays date: ",ap);
-		console.log("Pay Date: ",bp);
-		console.log("Days till payday: ",daysDiff,"days");
-		console.log("Balance: £",balance);
-		console.log("Daily budget: £",roundBudget);
-
+		//Output
 		return roundBudget;
 	}
 });
