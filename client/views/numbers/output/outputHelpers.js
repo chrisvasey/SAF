@@ -6,7 +6,7 @@ Template.numberOutput.helpers({
 		return readDate;
 	},
 	//Daily Balance
-	daily: function() {
+	budget: function() {
 		balance = this.cash;
 
 		//Number of days process
@@ -22,16 +22,17 @@ Template.numberOutput.helpers({
 		daysDiff = end - start; // exact dates
 
 		//budget
-		budget = balance / daysDiff;
+		workingBudget = balance / daysDiff;
+		roundBudget = Math.round(workingBudget * 100) / 100
 
 		//output
 		console.log("Todays date: ",ap);
 		console.log("Pay Date: ",bp);
 		console.log("Days till payday: ",daysDiff,"days");
 		console.log("Balance: £",balance);
-		console.log("Daily budget: £",budget);
+		console.log("Daily budget: £",roundBudget);
 
-		return "this will be the daily"
+		return roundBudget;
 	}
 });
 
