@@ -1,8 +1,25 @@
 <template name="numberOutput">
-	<h3 style="color: red;">{{_id}}</h3>
-	<h1>Daily Balance: £{{daily}} </h1>
-	<h1>Total balance remaining: £{{cash}}</h1>
-	<h1>Payday is in {{payDayRead}}</h1>
-	<h1>Daily budget: £{{budget}}</h1>
-	<br><br>
+	<div class="col-md-4 col-xs-12 outputWrap">
+		<div class="output">
+			<div class="numbers">
+				<h1>£{{budget}}</h1>
+				<h3>Left Today</h3>
+			</div>
+		</div>	
+	</div>
+	<div class="col-md-4 col-xs-12 outputWrap">
+		<div class="output">
+			<div class="numbers">
+				<h1>£{{cash}}</h1>
+				<h3>Total Balance</h3>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-12 outputWrap">
+		<div class="output">
+			<div class="numbers">
+				<h3>Payday is {{payDayRead}}</h3>
+			</div>
+		</div>	
+	</div>
 </template>
