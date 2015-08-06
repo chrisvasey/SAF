@@ -8,8 +8,8 @@ meteor-platform
 autopublish
 insecure
 less
-bootstrap
 mrt:moment
 jquery
 rajit:bootstrap3-datepicker
 fezvrasta:bootstrap-material-design
+fortawesome:fontawesome

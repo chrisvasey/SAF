@@ -1,0 +1,5 @@
+<template name="listNumbers">
+	{{#each numbersLoad}}
+		{{> numberOutput}}
+	{{/each}}
+</template>
